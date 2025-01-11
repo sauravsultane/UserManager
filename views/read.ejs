@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body class="bg-zinc-800">
+    <div class="p-10 ">
+        <h2 class="text-white text-2xl font-md mb-5 ">
+            Created Users
+        </h2>
+        
+        <a href="/" class="bg-blue-500 p-2 rounded-md text-white">Back to Home</a>
+    </div>
+    <div class="p-10 flex flex-wrap gap-2 ">
+        
+        <% users.forEach(function(user){ %>
+            <div class="users ">
+                <div class="user w-72 bg-zinc-700 p-4 rounded-md">
+                    <div class="max-w-full h-52 bg-zinc-500 rounded-md">
+                        <img src="<%=user.image%>" alt="">
+                    </div>
+                    <h3 class="text-xl text-white mt-3"> <%= user.name%></h3>
+                    <h5 class=" text-zinc-500"><%=user.email%></h5>
+                    <div class="flex justify-between mt-4">
+                        <a href="/edit/<%=user._id%>" class="text-zinc-300">Edit User</a>
+                        <a href="/delete/<%=user._id%>" class="text-red-500">Delete User</a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+        
+    </div>
+    
+    
+</body>
+</html>

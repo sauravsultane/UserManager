@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body class="bg-zinc-800 min-h-screen flex items-center justify-center">
+    <div class="bg-zinc-900 p-10 rounded-lg shadow-lg w-full max-w-md">
+        <!-- Navigation Section -->
+        <div class="nav mb-8">
+            <a href="/read" class="text-white bg-yellow-500 hover:bg-yellow-600 transition rounded-md py-2 px-4 inline-block">
+                View All Users
+            </a>
+        </div>
+
+        <!-- Form Section -->
+        <h2 class="text-3xl text-white font-bold mb-6">Create User</h2>
+        <form action="/create" method="post" class="space-y-6">
+            <!-- Name Field -->
+            <div>
+                <label for="name" class="block text-white font-medium mb-1">Name</label>
+                <input 
+                    id="name" 
+                    type="text" 
+                    placeholder="Enter your name" 
+                    name="name" 
+                    class="bg-zinc-700 p-3 rounded-md outline-none text-white w-full focus:ring-2 focus:ring-yellow-500" 
+                    required>
+            </div>
+
+            <!-- Email Field -->
+            <div>
+                <label for="email" class="block text-white font-medium mb-1">Email</label>
+                <input 
+                    id="email" 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    name="email" 
+                    class="bg-zinc-700 p-3 rounded-md outline-none text-white w-full focus:ring-2 focus:ring-yellow-500" 
+                    required>
+            </div>
+
+            <!-- Image URL Field -->
+            <div>
+                <label for="image" class="block text-white font-medium mb-1">Image URL</label>
+                <input 
+                    id="image" 
+                    type="url" 
+                    placeholder="Enter image URL" 
+                    name="image" 
+                    class="bg-zinc-700 p-3 rounded-md outline-none text-white w-full focus:ring-2 focus:ring-yellow-500">
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <input 
+                    type="submit" 
+                    value="Create User" 
+                    class="bg-blue-500 hover:bg-blue-600 transition py-3 px-6 rounded-md text-white w-full cursor-pointer">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
